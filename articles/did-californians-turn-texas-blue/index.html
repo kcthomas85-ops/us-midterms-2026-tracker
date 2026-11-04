@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10223b">
+  <meta name="description" content="Did Californians turn Texas blue? A playful, research-backed fact check of the 2026 Texas election narrative, with exit-poll charts and migration data.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Did Californians Turn Texas Blue? The Numbers Have a Plot Twist.">
+  <meta property="og:description" content="A Lone Star reality check. Two elections, one surprising pattern, and research that challenges a very popular political myth.">
+  <title>Did Californians Turn Texas Blue? | Lone Star Reality Check</title>
+  <style>
+    :root { --navy:#10223b; --navy2:#182f50; --ink:#182942; --paper:#fbf8f0; --white:#fffefb; --muted:#54637a; --line:#dce3e7; --blue:#2971d2; --red:#e34c5a; --gold:#f6bf55; --mint:#dff0e7; --purple:#7765a2; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    a:hover { text-decoration-thickness:2px; }
+    button { font:inherit; cursor:pointer; }
+    button:focus-visible,a:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    .wrap { width:min(1120px, calc(100% - 44px)); margin-inline:auto; }
+    .eyebrow { font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; font-weight:900; }
+    .star { display:inline-block; color:var(--gold); font-size:1.1em; }
+    .star::before { content:"★"; }
+    .nav { background:var(--navy); border-bottom:1px solid #ffffff25; color:#fff; }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; min-height:74px; gap:16px; }
+    .brand { display:flex; gap:12px; align-items:center; font-size:.86rem; font-weight:900; text-decoration:none; text-transform:uppercase; letter-spacing:.075em; line-height:1.13; }
+    .brand-mark { display:grid; place-items:center; width:40px; height:40px; border:1.5px solid var(--gold); border-radius:50%; font-size:1.7rem; color:var(--gold); }
+    .nav-actions { display:flex; gap:10px; align-items:center; }
+    .nav-link { color:#dce8f7; font-weight:700; font-size:.82rem; text-decoration:none; }
+    .small-button { color:#13213a; background:var(--gold); border:0; padding:10px 15px; border-radius:999px; font-size:.83rem; font-weight:850; box-shadow:0 3px 0 #bf8c30; }
+    .small-button:hover { transform:translateY(-1px); box-shadow:0 4px 0 #bf8c30; }
+    .hero { color:#fff; background:radial-gradient(ellipse at 74% 23%,#2c4c7b 0,transparent 45%),linear-gradient(126deg,#10223b,#162b4e 58%,#263c64); position:relative; overflow:hidden; }
+    .hero::before { content:"★  ·  ★  ·   ✦   ·  ★  ·  ✦  ·  ★"; position:absolute; top:11%; right:-55px; transform:rotate(-12deg); font-size:44px; letter-spacing:18px; opacity:.075; white-space:nowrap; pointer-events:none; }
+    .hero-inner { display:grid; grid-template-columns:1.2fr .8fr; min-height:515px; align-items:center; gap:20px; padding:67px 0 75px; }
+    .hero-label { display:inline-flex; align-items:center; gap:9px; padding:9px 13px; border-radius:999px; border:1px solid #ffffff4a; background:#ffffff11; font-size:.76rem; font-weight:750; letter-spacing:.09em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3,.serif { font-family:Georgia,"Times New Roman",serif; }
+    h1 { max-width:720px; font-size:clamp(3.2rem,7.3vw,6.85rem); font-weight:800; line-height:.96; letter-spacing:-.065em; margin:22px 0 20px; }
+    h1 em { font-style:normal; color:#83b8ff; text-decoration:underline wavy var(--gold) 4px; text-underline-offset:10px; }
+    .hero-sub { max-width:550px; font-size:clamp(1.03rem,2vw,1.2rem); color:#dce6f5; margin-bottom:28px; }
+    .meta { display:flex; gap:12px; flex-wrap:wrap; align-items:center; color:#ccd6e8; font-size:.83rem; font-weight:650; }
+    .meta span:not(:last-child)::after { content:"✦"; color:var(--gold); margin-left:12px; }
+    .hero-art { position:relative; min-height:360px; display:grid; place-items:center; }
+    .big-star { width:min(100%,380px); aspect-ratio:1; filter:drop-shadow(0 24px 36px #081426b0); transform:rotate(-7deg); }
+    .big-star svg { display:block; width:100%; height:100%; overflow:visible; }
+    .sticker { position:absolute; bottom:27px; left:4%; transform:rotate(7deg); border:3px solid var(--navy); background:var(--gold); box-shadow:6px 7px 0 #0a172d; border-radius:12px; color:#17243b; font-size:1.1rem; font-weight:1000; text-transform:uppercase; padding:15px 20px; line-height:1.05; letter-spacing:.05em; }
+    .ticker { overflow:hidden; white-space:nowrap; background:var(--gold); padding:12px 0; color:var(--navy); font-weight:900; font-size:.83rem; text-transform:uppercase; letter-spacing:.08em; }
+    .ticker-text { display:flex; gap:36px; justify-content:center; }
+    .ticker b { font-size:1.1rem; }
+    .intro { padding:82px 0 76px; }
+    .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; align-items:stretch; }
+    .claim-card,.truth-card { border:2px solid var(--navy); border-radius:16px; padding:30px; box-shadow:8px 9px 0 #14243b; }
+    .claim-card { background:#fff4f0; transform:rotate(-1deg); }
+    .truth-card { background:#e8f2ff; transform:rotate(1deg); }
+    .card-tag { display:inline-block; border:2px solid currentColor; border-radius:4px; padding:4px 8px; text-transform:uppercase; letter-spacing:.09em; font-size:.77rem; font-weight:950; }
+    .claim-card .card-tag { color:#c23d49; }
+    .truth-card .card-tag { color:#185cad; }
+    .claim-card h2,.truth-card h2 { font-size:clamp(1.7rem,3vw,2.5rem); line-height:1.12; letter-spacing:-.03em; margin:22px 0 14px; }
+    .claim-card p,.truth-card p { color:#42546a; font-size:.99rem; margin:0; }
+    .center-note { max-width:770px; margin:50px auto 0; text-align:center; font-family:Georgia,serif; font-size:1.28rem; line-height:1.48; }
+    .section { padding:74px 0; }
+    .section-paper { background:#fff; border-block:1px solid #e9e7e3; }
+    .section-kicker { color:#a23e4d; margin-bottom:8px; }
+    .section-title { font-size:clamp(2.2rem,4.4vw,4.1rem); line-height:1.03; letter-spacing:-.055em; margin-bottom:16px; }
+    .section-lede { max-width:790px; font-size:1.09rem; color:var(--muted); margin-bottom:30px; }
+    .chart-panel { border:1px solid #d8e1e9; background:#f7faff; border-radius:18px; padding:30px; box-shadow:0 14px 36px #16233c13; }
+    .chart-top { display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between; margin-bottom:25px; }
+    .chart-heading { font-size:1.4rem; margin:0; }
+    .year-toggle { display:inline-flex; gap:5px; padding:5px; background:#e2e9f1; border-radius:999px; }
+    .year-toggle button { border:0; border-radius:999px; padding:9px 20px; background:transparent; color:#456075; font-weight:900; }
+    .year-toggle button.active { background:var(--navy); color:white; box-shadow:0 2px 6px #18253d38; }
+    .legend { display:flex; gap:20px; flex-wrap:wrap; align-items:center; font-size:.8rem; font-weight:750; color:var(--muted); }
+    .dot { display:inline-block; width:11px; height:11px; border-radius:50%; margin-right:7px; vertical-align:middle; }
+    .dot-blue { background:var(--blue); } .dot-red { background:var(--red); }
+    .vote-list { margin:24px 0 10px; display:grid; gap:28px; }
+    .vote-row { display:grid; grid-template-columns:205px 1fr 125px; gap:17px; align-items:center; }
+    .voter-name { font-weight:900; font-size:.94rem; line-height:1.25; }
+    .voter-name small { display:block; color:var(--muted); font-weight:500; margin-top:4px; }
+    .margin-track { position:relative; height:34px; border-radius:5px; background:linear-gradient(90deg,#eaf1fb 0 49.65%,#cdd7e6 49.65% 50.35%,#fce8e8 50.35% 100%); overflow:hidden; }
+    .margin-track::before { content:""; position:absolute; top:0; left:50%; height:100%; width:2px; background:#344969; z-index:2; opacity:.55; }
+    .margin-fill { position:absolute; height:22px; top:6px; width:0; transition:left .5s ease,width .5s ease; border-radius:4px; }
+    .margin-fill.dem { background:var(--blue); left:50%; transform:translateX(-100%); }
+    .margin-fill.rep { background:var(--red); left:50%; }
+    .margin-badge { white-space:nowrap; font-weight:950; text-align:right; font-size:1.02rem; }
+    .margin-badge.dem { color:#195da8; } .margin-badge.rep { color:#c93645; }
+    .chart-foot { margin:22px 0 0; padding-top:20px; border-top:1px solid #d7e1ed; color:var(--muted); font-size:.88rem; }
+    .chart-foot strong { color:var(--ink); }
+    .quote-strip { display:grid; grid-template-columns:80px 1fr; gap:12px; align-items:start; padding:45px 0 0; }
+    .quote-star { font-size:5rem; line-height:1; color:var(--gold); text-shadow:2px 3px 0 #10223b; }
+    .quote-strip p { font:italic 1.5rem/1.35 Georgia,serif; margin:3px 0; }
+    .migration { display:grid; grid-template-columns:1.13fr .87fr; gap:40px; align-items:center; margin-top:24px; }
+    .migration p { max-width:620px; }
+    .bullet-points { padding-left:19px; margin:17px 0 0; }
+    .bullet-points li { margin:9px 0; padding-left:4px; }
+    .data-card { background:#fff; border:2px solid var(--navy); border-radius:20px; padding:30px 25px; box-shadow:8px 9px 0 var(--navy); text-align:center; transform:rotate(1deg); }
+    .data-card h3 { font-size:1.5rem; margin:0 0 5px; }
+    .data-card .sub { font-size:.85rem; color:var(--muted); margin:0 0 16px; }
+    .donut { --size:214px; width:var(--size); height:var(--size); border-radius:50%; margin:12px auto 20px; display:grid; place-items:center; background:conic-gradient(var(--red) 0 44%, var(--blue) 44% 73%, #d6dfe5 73% 100%); position:relative; }
+    .donut::before { content:""; position:absolute; width:58%; height:58%; border-radius:50%; background:white; }
+    .donut-center { position:relative; z-index:1; font-size:2.3rem; font-weight:1000; letter-spacing:-.06em; color:var(--navy); }
+    .donut-center small { display:block; font-size:.66rem; text-transform:uppercase; font-weight:800; letter-spacing:.09em; color:var(--muted); margin-top:-8px; }
+    .donut-legend { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin:4px 0; font-size:.79rem; font-weight:800; }
+    .data-note { font-size:.75rem; line-height:1.35; color:var(--muted); margin:15px 0 0; }
+    .source-pill { display:inline-flex; align-items:center; gap:6px; color:#1d65ba; font-weight:800; font-size:.85rem; text-underline-offset:3px; }
+    .four-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:17px; margin-top:37px; }
+    .reason { border-radius:14px; padding:23px 21px; background:#fff; border:1px solid var(--line); min-height:244px; }
+    .reason:nth-child(2) { background:#e9f2ff; }
+    .reason:nth-child(3) { background:#fff0ea; }
+    .reason:nth-child(4) { background:#e9f3eb; }
+    .reason-icon { display:grid; place-items:center; width:47px; height:47px; border-radius:50%; background:#10223b; color:var(--gold); font-size:1.25rem; margin-bottom:17px; }
+    .reason h3 { font-size:1.37rem; line-height:1.13; letter-spacing:-.02em; margin-bottom:11px; }
+    .reason p { font-size:.91rem; line-height:1.45; color:#42536a; margin:0; }
+    .bottomline { color:#fff; background:var(--navy); position:relative; overflow:hidden; padding:80px 0; }
+    .bottomline::after { content:"★"; color:#ffffff09; position:absolute; right:-60px; top:-145px; font-size:520px; line-height:1; pointer-events:none; }
+    .bottom-inner { position:relative; z-index:1; max-width:860px; }
+    .bottomline h2 { font-size:clamp(2.4rem,5.3vw,5rem); line-height:1.08; letter-spacing:-.04em; }
+    .bottomline h2 span { color:var(--gold); }
+    .bottomline p { max-width:780px; color:#d1dcec; font-size:1.09rem; }
+    .takeaway { background:#ffffff15; border-left:5px solid var(--gold); border-radius:0 8px 8px 0; padding:20px 25px; margin:26px 0; font-size:1.33rem; line-height:1.4; font-family:Georgia,serif; }
+    .copy-button { background:var(--gold); color:var(--navy); border:0; border-radius:999px; font-weight:900; padding:13px 22px; }
+    .sources { padding:72px 0 86px; }
+    .sources h2 { font-size:2.2rem; margin-bottom:12px; }
+    .sources p { color:var(--muted); font-size:.94rem; max-width:780px; }
+    .source-list { display:grid; grid-template-columns:1fr 1fr; gap:12px; list-style:none; padding:0; margin:24px 0 0; }
+    .source-list a { display:flex; gap:13px; align-items:start; text-decoration:none; color:var(--ink); background:white; border:1px solid var(--line); border-radius:11px; padding:18px; height:100%; }
+    .source-list a:hover { border-color:var(--blue); transform:translateY(-2px); box-shadow:0 4px 18px #14243b11; }
+    .source-num { display:grid; place-items:center; flex:0 0 30px; width:30px; height:30px; border-radius:50%; background:#e9f1fe; color:#225cad; font-size:.77rem; font-weight:950; }
+    .source-list strong { display:block; font-size:.92rem; line-height:1.3; }
+    .source-list small { display:block; margin-top:5px; font-size:.8rem; color:var(--muted); line-height:1.35; }
+    .footer { background:#eaf0f4; color:#506075; border-top:1px solid #d5dfe6; padding:22px 0; font-size:.8rem; }
+    .footer-inner { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
+    .footmark { color:var(--navy); font-weight:950; text-transform:uppercase; letter-spacing:.075em; }
+    @media (max-width:850px) { .hero-inner { grid-template-columns:1fr .54fr; min-height:460px; } .hero-art { min-height:260px; } .sticker { font-size:.82rem; padding:11px; left:-5px; bottom:24px; } .vote-row { grid-template-columns:155px 1fr 95px; } .migration { grid-template-columns:1fr .88fr; gap:20px; } .four-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:640px) { .wrap { width:min(100% - 34px,560px); } .nav-inner { min-height:65px; } .nav-link { display:none; } .hero-inner { display:block; padding:54px 0 28px; } h1 { font-size:clamp(3.3rem,13vw,5rem); max-width:570px; margin:23px 0; } .hero-sub { font-size:1.04rem; } .hero-art { min-height:230px; max-height:250px; justify-items:end; margin-top:2px; } .big-star { max-width:270px; } .sticker { right:24%; left:auto; bottom:20px; } .ticker-text { justify-content:flex-start; gap:20px; padding:0 17px; } .intro { padding:60px 0; } .intro-grid,.migration,.source-list { grid-template-columns:1fr; } .claim-card,.truth-card { padding:25px; box-shadow:5px 6px 0 var(--navy); } .claim-card { transform:rotate(-.4deg); } .truth-card { transform:rotate(.4deg); } .center-note { margin-top:38px; font-size:1.16rem; } .section { padding:58px 0; } .chart-panel { padding:20px 16px; } .chart-top { gap:12px; } .vote-row { grid-template-columns:1fr 105px; gap:9px; } .voter-name { grid-column:1/-1; } .margin-track { grid-column:1; } .margin-badge { grid-column:2; } .quote-strip { grid-template-columns:45px 1fr; padding-top:37px; gap:5px; } .quote-star { font-size:2.9rem; } .quote-strip p { font-size:1.2rem; } .migration { gap:27px; } .data-card { width:min(100% - 10px,420px); margin:0 auto; } .four-grid { gap:12px; } .reason { min-height:auto; padding:19px 15px; } .reason h3 { font-size:1.12rem; } .reason p { font-size:.83rem; } .bottomline { padding:62px 0; } .takeaway { font-size:1.13rem; } .sources { padding:62px 0; } }
+    @media (max-width:380px) { .four-grid { grid-template-columns:1fr; } .brand { font-size:.73rem; gap:7px; } .brand-mark { width:34px; height:34px; font-size:1.35rem; } .small-button { padding:8px 12px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
+    @media print { .nav-actions,.year-toggle,.copy-button { display:none!important; } .hero,.bottomline { background:#10223b!important; color:#fff!important; print-color-adjust:exact; -webkit-print-color-adjust:exact; } .section { padding:32px 0; } .hero-inner { min-height:250px; } .big-star { max-width:230px; } .source-list { grid-template-columns:1fr; } .reason { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">★</span><span>Lone Star<br>Reality Check</span></a>
+      <div class="nav-actions"><a class="nav-link" href="#the-numbers">The numbers</a><a class="nav-link" href="#sources">Sources</a><button class="small-button" type="button" id="shareBtn">Share ★</button></div>
+    </div>
+  </nav>
+  <header class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-label"><span class="star" aria-hidden="true"></span> Texas election myth-buster</span>
+        <h1>Did California turn Texas <em>blue?</em></h1>
+        <p class="hero-sub">Plot twist: the voters moving into Texas have often been <strong>more Republican</strong> than the Texans already there. Let's follow the evidence.</p>
+        <div class="meta"><span>November 4, 2026</span><span>About 4 minutes</span><span>With receipts</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="big-star">
+          <svg viewBox="0 0 360 360" role="presentation"><defs><linearGradient id="starGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9fcbff"/><stop offset="1" stop-color="#2874d4"/></linearGradient></defs><path d="M180 16 219 131 340 133 244 207 277 329 180 260 83 329 116 207 20 133 141 131Z" fill="url(#starGradient)" stroke="#ffdb89" stroke-width="8" stroke-linejoin="round"/><path d="M180 48 210 146 307 148 229 209 255 291 180 242 105 291 131 209 53 148 150 146Z" fill="none" stroke="#eaf4ff" stroke-opacity=".72" stroke-width="3" stroke-linejoin="round"/><text x="180" y="197" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="51" font-weight="bold" transform="rotate(7 180 180)">TEXAS</text></svg>
+        </div>
+        <div class="sticker">The data<br>has receipts! ★</div>
+      </div>
+    </div>
+  </header>
+  <div class="ticker" aria-label="Headline takeaway"><div class="ticker-text"><span>★ Native Texans voted more Democratic than newcomers in 2018 and 2024</span><b aria-hidden="true">✦</b><span>That's the actual plot twist</span></div></div>
+
+  <main>
+    <section class="intro wrap" aria-label="The claim versus the evidence">
+      <div class="intro-grid">
+        <article class="claim-card"><span class="card-tag">The claim</span><h2>“Californians moved in and turned Texas blue.”</h2><p>It's a familiar political talking point. And with Texas's historic Democratic victories in 2026, it's making the rounds again.</p></article>
+        <article class="truth-card"><span class="card-tag">The reality</span><h2>That explanation doesn't hold up to the data.</h2><p>Historical exit polls and research on California migrants tell a much more interesting—and much less convenient—story.</p></article>
+      </div>
+      <p class="center-note">Yes, Democrats won major statewide races in Texas in 2026. <strong>No, that doesn't prove people moving from California caused it.</strong> Let's look at what we actually know.</p>
+    </section>
+
+    <section class="section section-paper" id="the-numbers">
+      <div class="wrap">
+        <p class="eyebrow section-kicker">01 / The plot twist</p>
+        <h2 class="section-title">Who was voting blue?<br>Actual Texans.</h2>
+        <p class="section-lede">In two elections, people born in Texas favored the Democrat for U.S. Senate. Voters born elsewhere favored the Republican. Tap between election years to compare the margins.</p>
+        <div class="chart-panel">
+          <div class="chart-top">
+            <h3 class="chart-heading" id="chartTitle">2018 U.S. Senate · O'Rourke vs. Cruz</h3>
+            <div class="year-toggle" role="group" aria-label="Choose election year"><button type="button" class="active" data-year="2018" aria-pressed="true">2018</button><button type="button" data-year="2024" aria-pressed="false">2024</button></div>
+          </div>
+          <div class="legend"><span><i class="dot dot-blue"></i>Democratic advantage</span><span><i class="dot dot-red"></i>Republican advantage</span><span>Margin in percentage points</span></div>
+          <div class="vote-list" id="voteList" aria-live="polite">
+            <div class="vote-row"><div class="voter-name">Born in Texas<small>Native-born Texans</small></div><div class="margin-track" role="img" aria-label="Democrats led by 3 percentage points"><div class="margin-fill dem" style="width:7.5%"></div></div><div class="margin-badge dem">D +3 pts</div></div>
+            <div class="vote-row"><div class="voter-name">Born elsewhere<small>All other states—not just CA</small></div><div class="margin-track" role="img" aria-label="Republicans led by 15 percentage points"><div class="margin-fill rep" style="width:37.5%"></div></div><div class="margin-badge rep">R +15 pts</div></div>
+          </div>
+          <p class="chart-foot" id="chartFoot"><strong>2018:</strong> Among Texas-born voters, O'Rourke led Cruz 51%–48%. Among those born outside Texas, Cruz led by around 15 points. Exit poll estimates, not certified counts. <a href="https://abcnews.com/Politics/negative-trump-divided-issues-voters-reshuffle-cards-washington/story?id=59025819" target="_blank" rel="noopener noreferrer">2018 exit-poll reporting ↗</a></p>
+        </div>
+        <div class="quote-strip"><div class="quote-star" aria-hidden="true">★</div><p>To be clear: “born elsewhere” doesn't mean “from California.” But it does completely undermine the assumption that newcomers were the more Democratic group.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="migration">
+      <div class="wrap">
+        <p class="eyebrow section-kicker">02 / Follow the movers</p>
+        <h2 class="section-title">Okay, but what about<br><em>Californians</em> specifically?</h2>
+        <p class="section-lede">Researchers James Gimpel and Daron Shaw actually tracked California-to-Texas movers. Their conclusion: the migration was politically mixed, and its statewide partisan effect was small.</p>
+        <div class="migration">
+          <div>
+            <p>In many Texas communities, <strong>more registered Republicans than Democrats were arriving from California.</strong> And migrants tended to settle among people with similar politics.</p>
+            <p>Williamson County, near Austin, makes the point beautifully: it was becoming more competitive for Democrats even as the identified Californians moving there leaned Republican.</p>
+            <ul class="bullet-points"><li>Migration can change individual neighborhoods.</li><li>That doesn't mean it changes the whole state's political balance.</li><li>California is not one big, politically uniform voting bloc.</li></ul>
+            <p style="margin-top:24px"><a class="source-pill" href="https://www.civitasinstitute.org/research/long-distance-migration-as-a-two-step-sorting-process-the-resettlement-of-californians-in-texas" target="_blank" rel="noopener noreferrer">Read the researchers' analysis <span aria-hidden="true">↗</span></a></p>
+          </div>
+          <aside class="data-card" aria-label="Historical party affiliation among identified Californians who moved to Williamson County"><h3>California → Williamson County</h3><p class="sub">Historical migrant party affiliation</p><div class="donut" role="img" aria-label="44 percent Republican, 29 percent Democratic, 27 percent undetermined"><div class="donut-center">44%<small>Republican</small></div></div><div class="donut-legend"><span><i class="dot dot-red"></i>44% R</span><span><i class="dot dot-blue"></i>29% D</span><span><i class="dot" style="background:#d6dfe5"></i>27% unknown</span></div><p class="data-note">Among identified CA-to-Williamson movers in historical voter files through 2020. Registration affiliation, not 2026 votes. Percentages rounded.</p></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="what-changed">
+      <div class="wrap">
+        <p class="eyebrow section-kicker">03 / So what actually changed?</p>
+        <h2 class="section-title">Texas had its own<br>reasons to vote differently.</h2>
+        <p class="section-lede">There's no magic single-cause explanation for a statewide election. These are four important pieces of the bigger picture.</p>
+        <div class="four-grid">
+          <article class="reason"><div class="reason-icon" aria-hidden="true">✦</div><h3>Generational shifts</h3><p>Younger Texans aren't politically identical to their parents and grandparents. New generations can reshape the electorate from within.</p></article>
+          <article class="reason"><div class="reason-icon" aria-hidden="true">▦</div><h3>Growing suburbs</h3><p>Dallas–Fort Worth, Houston, Austin and San Antonio suburbs have grown, diversified and become central to statewide races.</p></article>
+          <article class="reason"><div class="reason-icon" aria-hidden="true">↗</div><h3>National backlash</h3><p>Texas's Democratic victories came amid a wider 2026 backlash against Trump and Republican policies, not in isolation.</p></article>
+          <article class="reason"><div class="reason-icon" aria-hidden="true">★</div><h3>Candidate choices</h3><p>Individual candidates matter, too. Voters can reject specific leaders or policies without permanently changing party loyalty.</p></article>
+        </div>
+        <p style="color:var(--muted);font-size:.86rem;margin:24px 0 0">Further reading: <a href="https://www.texastribune.org/2026/10/28/texas-suburbs-growth-democratic-shift-us-senate-charts/" target="_blank" rel="noopener noreferrer">Texas Tribune's suburban voting analysis</a> · <a href="https://www.texastribune.org/2026/11/04/texas-democrats-blue-wave/" target="_blank" rel="noopener noreferrer">November 2026 election analysis</a>.</p>
+      </div>
+    </section>
+
+    <section class="bottomline" id="takeaway">
+      <div class="wrap bottom-inner">
+        <p class="eyebrow" style="color:var(--gold)">04 / The bottom line</p>
+        <h2>Texas didn't have to become <span>California</span> to vote for change.</h2>
+        <p>Does migration affect politics? Of course. Can California-born voters influence particular districts? Absolutely. But claiming they caused Texas's 2026 blue wave needs evidence that hasn't been established.</p>
+        <p>The historical evidence points toward something rather different: in the last two Cruz Senate elections, native Texans voted <em>more</em> Democratic than newcomers.</p>
+        <div class="takeaway" id="quoteToCopy">“Stop blaming Californians for how Texas voted. Maybe start listening to Texans.”</div>
+        <button type="button" class="copy-button" id="copyQuote">Copy the takeaway ★</button>
+      </div>
+    </section>
+
+    <section class="sources wrap" id="sources">
+      <p class="eyebrow section-kicker">Good arguments deserve good sources</p>
+      <h2>Check the receipts.</h2>
+      <p>This is a dated, sourced explainer—not a live election feed. Historical exit-poll data and migration research cannot, by themselves, establish exactly how California-born Texans voted in November 2026.</p>
+      <ol class="source-list">
+        <li><a href="https://www.texastribune.org/2026/10/28/texas-suburbs-growth-democratic-shift-us-senate-charts/" target="_blank" rel="noopener noreferrer"><span class="source-num">01</span><span><strong>Texas Tribune · 2026 suburban voting analysis ↗</strong><small>2018 and 2024 native-born versus transplant exit polls, suburban growth and diversity.</small></span></a></li>
+        <li><a href="https://www.civitasinstitute.org/research/long-distance-migration-as-a-two-step-sorting-process-the-resettlement-of-californians-in-texas" target="_blank" rel="noopener noreferrer"><span class="source-num">02</span><span><strong>Gimpel & Shaw · California-to-Texas migration research ↗</strong><small>Published in Political Behavior; researchers' summary of statewide and local effects.</small></span></a></li>
+        <li><a href="https://www.tpr.org/government-politics/2024-11-04/are-californians-moving-to-texas-and-turning-it-blue-the-numbers-say-not-really" target="_blank" rel="noopener noreferrer"><span class="source-num">03</span><span><strong>Texas Public Radio · Williamson County figures ↗</strong><small>44% Republican, 29% Democratic, with remaining affiliations undetermined.</small></span></a></li>
+        <li><a href="https://www.ppic.org/blog/californias-republican-exodus/" target="_blank" rel="noopener noreferrer"><span class="source-num">04</span><span><strong>PPIC · California's Republican Exodus ↗</strong><small>2020–2024 data showing partisan self-selection among people leaving California.</small></span></a></li>
+        <li><a href="https://www.texastribune.org/2026/11/04/texas-democrats-blue-wave/" target="_blank" rel="noopener noreferrer"><span class="source-num">05</span><span><strong>Texas Tribune · 2026 Democratic victories ↗</strong><small>Reporting on Hinojosa, Talarico, and the broader midterm shift.</small></span></a></li>
+        <li><a href="https://abcnews.com/Politics/negative-trump-divided-issues-voters-reshuffle-cards-washington/story?id=59025819" target="_blank" rel="noopener noreferrer"><span class="source-num">06</span><span><strong>ABC News · 2018 exit-poll reporting ↗</strong><small>Original election-night account of native versus nonnative Texas voters.</small></span></a></li>
+      </ol>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span class="footmark"><span class="star" aria-hidden="true"></span> Lone Star Reality Check</span><span>Research-backed, independent editorial · Published November 4, 2026</span></div></footer>
+  <script>
+    (function(){
+      const sets={
+        "2018":{title:"2018 U.S. Senate · O'Rourke vs. Cruz",native:{side:"dem",points:3},newcomers:{side:"rep",points:15},foot:"<strong>2018:</strong> Among Texas-born voters, O'Rourke led Cruz 51%–48%. Among those born outside Texas, Cruz led by around 15 points. Exit poll estimates, not certified counts. <a href='https://abcnews.com/Politics/negative-trump-divided-issues-voters-reshuffle-cards-washington/story?id=59025819' target='_blank' rel='noopener noreferrer'>2018 exit-poll reporting ↗</a>"},
+        "2024":{title:"2024 U.S. Senate · Allred vs. Cruz",native:{side:"dem",points:4},newcomers:{side:"rep",points:16},foot:"<strong>2024:</strong> Allred led among Texas-born voters by 4 percentage points. Cruz led among those born elsewhere by 16 points. Margins are from CNN exit-poll estimates, as reported by <a href='https://www.texastribune.org/2026/10/28/texas-suburbs-growth-democratic-shift-us-senate-charts/' target='_blank' rel='noopener noreferrer'>The Texas Tribune ↗</a>."}
+      };
+      const btns=[...document.querySelectorAll('[data-year]')];
+      const voteList=document.getElementById('voteList');
+      function bar(v,label){const dir=v.side==='dem'?'Democratic':'Republican';const abbrev=v.side==='dem'?'D':'R';const pct=(v.points/20)*50;return `<div class="vote-row"><div class="voter-name">${label}<small>${label==='Born in Texas'?'Native-born Texans':'All other states—not just CA'}</small></div><div class="margin-track" role="img" aria-label="${dir} advantage: ${v.points} percentage points"><div class="margin-fill ${v.side}" style="width:${pct}%"></div></div><div class="margin-badge ${v.side}">${abbrev} +${v.points} pts</div></div>`;}
+      function updateYear(year){const d=sets[year];if(!d)return;document.getElementById('chartTitle').textContent=d.title;voteList.innerHTML=bar(d.native,'Born in Texas')+bar(d.newcomers,'Born elsewhere');document.getElementById('chartFoot').innerHTML=d.foot;btns.forEach(b=>{const active=b.dataset.year===year;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});}
+      btns.forEach(b=>b.addEventListener('click',()=>updateYear(b.dataset.year)));
+      async function copyText(text,button,success){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);}else{const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw Error('No clipboard');}const old=button.textContent;button.textContent=success;setTimeout(()=>button.textContent=old,2200);}catch(_){button.textContent='Please copy manually';setTimeout(()=>button.textContent='Copy the takeaway ★',2200);}}
+      document.getElementById('copyQuote').addEventListener('click',e=>copyText(document.getElementById('quoteToCopy').textContent,e.currentTarget,'Copied! ★'));
+      document.getElementById('shareBtn').addEventListener('click',async e=>{const share={title:document.title,text:'Did Californians turn Texas blue? The data has a plot twist.',url:location.href};if(navigator.share){try{await navigator.share(share);return;}catch(err){if(err&&err.name==='AbortError')return;}}copyText(location.href,e.currentTarget,'Link copied! ★');});
+      updateYear('2018');
+    })();
+  </script>
+</body>
+</html>
