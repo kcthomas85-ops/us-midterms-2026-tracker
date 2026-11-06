@@ -18,10 +18,10 @@
 <header class="hero"><div class="shell">
 <div class="eyebrow">Interactive election data / Texas &amp; United States</div>
 <h1>Where did all those <em>votes</em> come from?</h1>
-<p>Texas broke its absolute midterm-vote record. Democrats gained dramatically. Some Republicans crossed over. But <strong>which numbers measure turnout, which measure persuasion, and which are just clues?</strong> Explore the evidence yourself.</p>
+<p>Texas broke its absolute midterm-vote record in votes recorded for governor. Democrats gained dramatically. Some Republicans crossed over. But <strong>which numbers measure turnout, which measure persuasion, and which are just clues?</strong> Explore the evidence yourself.</p>
 <div class="hero-stats">
-<div class="hero-stat"><strong id="headExtra">+1.80M</strong><span>More Texas ballots than in 2022</span></div>
-<div class="hero-stat"><strong id="headRate">52.0%</strong><span>2026 Texas registered-voter turnout, calculated</span></div>
+<div class="hero-stat"><strong id="headExtra">+1.80M</strong><span>More 2026 governor votes than 2022 total ballots</span></div>
+<div class="hero-stat"><strong id="headRate">52.0%</strong><span>2026 minimum Texas registered-voter participation, calculated</span></div>
 <div class="hero-stat"><strong>~11%</strong><span>Republican identifiers backing Talarico in a voter survey</span></div>
 <div class="hero-stat"><strong>124.33M</strong><span>Estimated nationwide ballots, 2026</span></div>
 </div>
@@ -85,6 +85,16 @@
 
 <section class="section" id="geography"><div class="kicker">05 / Geographic shifts</div><h2>Where did participation rise the most?</h2><p class="lede">County-level changes are powerful evidence of a changing electorate, but they do not establish whether particular residents switched their votes. Compare regional turnout-rate changes from 2022.</p>
 <div class="grid2"><div class="card"><h3>Change in turnout rate, 2022 → 2026</h3><div id="regionBars" class="bars-list"></div><div class="region-tabs" aria-label="Select geographic region" id="regionButtons"></div><div class="detail" id="regionDetail" aria-live="polite"></div></div><div class="card"><h3>Which areas moved?</h3><p><strong>Border counties:</strong> The 16-county border region saw turnout rise more than 8 percentage points. Several counties that supported Trump in 2024 swung sharply back toward Democrats in the 2026 Senate election.</p><p><strong>Suburbs:</strong> Collin, Denton and Fort Bend were among the places with turnout growth around 4.7 points. Talarico narrowly carried the Tribune’s suburban grouping after Ted Cruz had won it by about 19 points in 2018.</p><p><strong>Rural Texas:</strong> Turnout increased roughly 1.4 points, while the Republican Senate margin in rural counties declined from approximately 54.4 points in 2018 to 45 points in 2026.</p><p class="small">Some counties recorded declining turnout and some growth. A shift in county margins is not proof that any particular voter changed candidates.</p><a class="source-link" href="https://www.texastribune.org/2026/11/04/texas-blue-wave-voter-turnout/" target="_blank" rel="noopener">Open Texas Tribune’s geographic analysis ↗</a></div></div>
+<div class="card" style="margin-top:22px">
+<div class="kicker">County-level explorer · selection of 17 counties</div>
+<h3 style="font-size:1.45rem;margin-top:6px">Which major counties swung furthest toward Democrats?</h3>
+<p class="small">Compare each county’s <strong>2024 Trump–Harris presidential margin</strong> with its <strong>2026 Talarico–Paxton U.S. Senate margin</strong>. Changes are expressed in percentage points, not percentages of voters who personally switched. The races are for different offices and involve different electorates.</p>
+<div class="controls"><button class="control" data-county-filter="all" aria-pressed="true">All 17</button><button class="control" data-county-filter="flips" aria-pressed="false">Counties that flipped</button><button class="control" data-county-sort="swing" aria-pressed="true">Biggest shift first</button><button class="control" data-county-sort="name" aria-pressed="false">County A–Z</button></div>
+<div id="countySummary" class="detail" aria-live="polite"></div>
+<div class="table-wrap"><table><thead><tr><th>County</th><th>2024 President</th><th>2026 Senate</th><th>D shift</th></tr></thead><tbody id="countyTable"></tbody></table></div>
+<div class="actions" style="margin-top:18px"><button class="action secondary" id="countyCSV" type="button">↓ Export county data (CSV)</button><a class="action secondary" href="https://data.seeitnameitfightit.com/turnout/index.html" target="_blank" rel="noopener noreferrer" style="text-decoration:none">Open county-level source ↗</a></div>
+<p class="fineprint">The 17 counties form an illustrative subset of large counties, <strong>not</strong> a complete dataset of all 254 Texas counties. Margins are rounded to one decimal, which can create 0.1-point rounding differences in swings. Source values and comparisons as published November 6, 2026; 2026 figures remain unofficial.</p>
+</div>
 </section>
 
 <section class="section" id="evidence"><div class="kicker">06 / What do we know about three-time Trump voters?</div><h2>“I voted for Trump three times. In 2026, I voted for a Democrat.”</h2><div class="grid-even">
@@ -93,7 +103,7 @@
 <div class="callout"><h3>Three things can all be true at once</h3><p>Republican-leaning voters may sit out; some voters may cross party lines; and Democratic-leaning or previously absent voters may turn out. Official totals alone cannot partition the electorate into these individual histories. The best assessment combines returns, registration data and well-designed voter surveys—without treating them as interchangeable.</p></div>
 </section>
 
-<section class="section" id="sources"><div class="kicker">07 / Show your work</div><h2>Every key claim has a clickable source.</h2><p class="lede">These links lead to government records, methodological data tables and published survey reporting. The article is a dated snapshot, not an automatic live-data feed.</p><div class="source-grid" id="sourceGrid"></div><div class="card" style="margin-top:18px"><h3>Methods &amp; limitations</h3><p><strong>Texas turnout denominator:</strong> total ballots divided by the Texas Secretary of State’s registered-voter count. The 2026 rate is calculated from a Nov. 6 unofficial county-reporting snapshot and an October 16 registration announcement; it is not itself an official certified 2026 turnout figure.</p><p><strong>National turnout denominator:</strong> voting-eligible population (VEP) per University of Florida Election Lab, not total population or registered voters.</p><p><strong>Voting-preference data:</strong> candidate vote totals, self-reported party affiliation, recalled 2024 presidential votes and county-level swings measure different things. Survey-based person-count extrapolations assume the sample percentages apply to the election-wide ballot count and are displayed rounded.</p><p><strong>Changes over time:</strong> late ballots, recounts, corrections, and certified canvasses may alter the preliminary 2026 figures. No demographic or geographic comparison proves why an individual voted a particular way.</p><div class="actions"><button class="action" id="shareBtn" type="button">Copy this page’s link</button><a class="action secondary" href="../did-californians-turn-texas-blue/" style="text-decoration:none">Read the California migration fact-check ↗</a><a class="action secondary" href="../../" style="text-decoration:none">Back to election tracker ↗</a></div><p class="tiny" id="shareStatus" aria-live="polite"></p></div></section>
+<section class="section" id="sources"><div class="kicker">07 / Show your work</div><h2>Every key claim has a clickable source.</h2><p class="lede">These links lead to government records, methodological data tables and published survey reporting. The article is a dated snapshot, not an automatic live-data feed.</p><div class="source-grid" id="sourceGrid"></div><div class="card" style="margin-top:18px"><h3>Methods &amp; limitations</h3><p><strong>Texas turnout denominator:</strong> total ballots divided by the Texas Secretary of State’s registered-voter count. The 2026 rate is calculated from a Nov. 6 unofficial governor-race vote count and an October 16 registration announcement. Some ballots omit a vote for governor, so the calculated value is a conservative proxy—not the eventual certified ballots-cast turnout statistic.</p><p><strong>National turnout denominator:</strong> voting-eligible population (VEP) per University of Florida Election Lab, not total population or registered voters.</p><p><strong>Voting-preference data:</strong> candidate vote totals, self-reported party affiliation, recalled 2024 presidential votes and county-level swings measure different things. Survey-based person-count extrapolations assume the sample percentages apply to the election-wide ballot count and are displayed rounded.</p><p><strong>Changes over time:</strong> late ballots, recounts, corrections, and certified canvasses may alter the preliminary 2026 figures. No demographic or geographic comparison proves why an individual voted a particular way.</p><div class="actions"><button class="action" id="shareBtn" type="button">Copy this page’s link</button><a class="action secondary" href="../did-californians-turn-texas-blue/" style="text-decoration:none">Read the California migration fact-check ↗</a><a class="action secondary" href="../../" style="text-decoration:none">Back to election tracker ↗</a></div><p class="tiny" id="shareStatus" aria-live="polite"></p></div></section>
 </main>
 <footer class="footer"><div class="shell"><span>★ 2026 Midterms Data Lab · Last reviewed November 6, 2026 · Figures subject to revision</span><span>Vote counts ≠ voter identities. Anecdotes ≠ representative surveys.</span></div></footer>
 <script>
@@ -102,15 +112,17 @@ const sources=[
  {name:"Texas Secretary of State · Historical turnout",desc:"Official 2018, 2022 and 2024 ballots, registrations and turnout rates.",url:"https://www.sos.state.tx.us/elections/historical/70-92.shtml"},
  {name:"Texas Secretary of State · 2026 registration",desc:"19,041,684 registered voters announced October 16, 2026.",url:"https://www.sos.texas.gov/about/newsreleases/2026/101626.shtml"},
  {name:"Texas Secretary of State · 2026 election returns",desc:"Official state reporting site. Unofficial returns until canvass.",url:"https://electionresults.sos.state.tx.us/results.html"},
- {name:"Texas election results · SOS-fed county tracker",desc:"Nov. 6 snapshot: 9,907,381 ballots; 254 counties reported. Unofficial.",url:"https://www.txelectionresults.com/2026-general-election"},
- {name:"University of Florida Election Lab · 2026 turnout",desc:"124.33 million estimated national ballots; 49.42% of voting-eligible population.",url:"https://election.lab.ufl.edu/2026-general-election-turnout/"},
+ {name:"Texas election results · SOS-fed county tracker",desc:"Nov. 6 snapshot: 9,907,381 votes in governor race; all 254 counties reporting. Ballot total may be higher. Unofficial.",url:"https://www.txelectionresults.com/2026-general-election"},
+ {name:"University of Florida Election Lab · 2026 turnout",desc:"124.33 million estimated national ballots; 49.42% of voting-eligible population. Different turnout numerator from Texas 2026 proxy.",url:"https://election.lab.ufl.edu/2026-general-election-turnout/"},
  {name:"University of Florida Election Lab · historical series",desc:"Comparable national VEP turnout methods for 2018, 2022 and 2024.",url:"https://election.lab.ufl.edu/voter-turnout/"},
  {name:"Texas House Journal · 2022 certified governor vote",desc:"Abbott 4,437,099; O’Rourke 3,553,656.",url:"https://journals.house.texas.gov/HJRNL/88R/PDF/88RDAY03FINAL.PDF"},
  {name:"Texas Tribune · Geographic turnout changes",desc:"Border, urban, suburban and rural turnout and political shifts in 2026.",url:"https://www.texastribune.org/2026/11/04/texas-blue-wave-voter-turnout/"},
  {name:"Texas Tribune · Rural voting analysis",desc:"Rural participation and Senate Republican margins.",url:"https://www.texastribune.org/2026/11/04/texas-rural-vote-2026/"},
  {name:"CNN · 2026 voter poll analysis",desc:"Evidence of 2024 Trump voters supporting Democrats in 2026, syndicated report.",url:"https://abc17news.com/politics/national-politics/cnn-us-politics/2026/11/05/cnn-voter-poll-democrats-senate-sweep-shows-a-fracturing-maga-movement/"},
  {name:"CNN · 2026 Texas Senate exit-poll tables",desc:"Reported splits by party identification, independents and recalled 2024 vote.",url:"https://www.cnn.com/election/2026/exit-polls/texas/senate"},
- {name:"Associated Press · AP Voter Poll",desc:"Large national voter survey and Texas voting-group analysis.",url:"https://www.ap.org/news-highlights/elections/2026/young-voters-led-a-sharp-shift-toward-democrats-in-the-2026-midterms-the-ap-voter-poll-finds/"}
+ {name:"Associated Press · AP Voter Poll",desc:"Large national voter survey and Texas voting-group analysis.",url:"https://apnews.com/article/9fc6de0b46af4336df2684c6d1d504d9"},
+ {name:"CNN Texas 2026 Senate · cross-tab reproduction",desc:"Detailed candidate choice by party identification, 2024 presidential vote and independence (transcribed CNN tables).",url:"https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas#Analysis"},
+ {name:"Texas county swing tracker · statewide and county data",desc:"Direct county-level comparison of 2024 presidential margins and 2026 Senate margins for a selected set of populous counties.",url:"https://data.seeitnameitfightit.com/turnout/index.html"}
 ];
 const tx=[
 {year:2018,votes:8371655,rate:53.01,reg:15793257,type:"Midterm",source:sources[0]},
@@ -142,7 +154,7 @@ function renderTurnout(){
  const selected=data.find(x=>x.year===state.year)||data[3];
  byId("chartDetail").innerHTML="<strong>"+selected.year+" · "+selected.type+":</strong> "+fmt(selected.votes)+" ballots; "+pct(selected.rate,2)+(state.area==="texas"?" of registered voters.":" of the voting-eligible population.")+" <a href=\""+selected.source.url+"\" target=\"_blank\" rel=\"noopener noreferrer\">Primary source ↗</a>";
  byId("turnoutTable").innerHTML="<table><thead><tr><th>Year</th><th>Ballots</th><th>Rate</th><th>Source</th></tr></thead><tbody>"+data.map(x=>"<tr><td><strong>"+x.year+"</strong></td><td>"+compact(x.votes)+(x.year===2026?"*":"")+"</td><td>"+pct(x.rate,2)+"</td><td><a class=\"source-link\" href=\""+x.source.url+"\" target=\"_blank\" rel=\"noopener noreferrer\">Open ↗</a></td></tr>").join("")+"</tbody></table>";
- byId("turnoutCaveat").textContent=state.area==="texas"?"Texas rates use the registered-voter denominator. 2026: 9,907,381 reported ballots ÷ 19,041,684 October registered voters; provisional and not certified. *2026 figures are unofficial.":"National rates use voting-eligible population (VEP), not registered voters. National ballot totals before 2026 are rounded historical figures. *2026 is the UF Election Lab estimate last updated November 4.";
+ byId("turnoutCaveat").textContent=state.area==="texas"?"Texas rates use the registered-voter denominator. The 2026 proxy is a conservative minimum because some ballots leave the governor race blank. 2026: 9,907,381 votes recorded in the governor race ÷ 19,041,684 October registered voters; this is a close proxy and lower bound for ballots cast, not a certified turnout statistic. *2026 figures are unofficial.":"National rates use voting-eligible population (VEP), not registered voters. National ballot totals before 2026 are rounded historical figures. *2026 is the UF Election Lab estimate last updated November 4.";
  document.querySelectorAll("[data-area]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.area===state.area)));
  document.querySelectorAll("[data-metric]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.metric===state.metric)));
 }
@@ -197,9 +209,31 @@ const regions=[
 function renderRegions(){byId("regionBars").innerHTML=regions.map(r=>"<div class=\"barrow\"><label>"+r.name+"</label><div class=\"hbar\"><div class=\"fill "+(r.key==="rural"?"red":r.key==="suburbs"?"gold":"")+"\" style=\"width:"+(r.points/9*100).toFixed(1)+"%\"></div></div><b>"+(r.key==="border"?"&gt;8":r.key==="urban"?"~8":r.points.toFixed(1))+" pp</b></div>").join("");
 byId("regionButtons").innerHTML="";regions.forEach(r=>{const b=document.createElement("button");b.textContent=r.name;b.setAttribute("aria-pressed",String(state.region===r.key));b.addEventListener("click",()=>{state.region=r.key;renderRegions()});byId("regionButtons").append(b)});
 const selected=regions.find(r=>r.key===state.region);byId("regionDetail").innerHTML="<strong>"+selected.name+"</strong> · "+selected.desc+" <a href=\"https://www.texastribune.org/2026/11/04/texas-blue-wave-voter-turnout/\" target=\"_blank\" rel=\"noopener noreferrer\">Read source ↗</a>";}
+
+/* Positive margins indicate Democratic votes, negative margins Republican. */
+const counties=[
+["Bexar",9.9,31.4],["Travis",40.1,53.1],["Collin",-11.4,4.5],["Denton",-13.4,2.1],["Fort Bend",1.6,22.9],["El Paso",15.3,42.9],["Montgomery",-45.9,-27.1],["Williamson",-2.5,13.9],["Hidalgo",-2.9,42.4],["Brazoria",-20.0,1.8],["Galveston",-27.7,-9.8],["Bell",-16.4,-0.6],["Cameron",-5.8,34.9],["Nueces",-11.6,7.2],["Lubbock",-39.9,-20.8],["Hays",5.7,27.4],["Smith",-45.5,-29.4]];
+let countyFilter="all",countySort="swing";
+const marginLabel=n=>n>=0?"D +"+n.toFixed(1):"R +"+Math.abs(n).toFixed(1);
+function filteredCounties(){let rows=counties.filter(x=>countyFilter==="all"||x[1]<0&&x[2]>0);
+rows=[...rows];rows.sort((a,b)=>countySort==="name"?a[0].localeCompare(b[0]):(b[2]-b[1])-(a[2]-a[1]));return rows}
+function renderCounties(){
+const data=filteredCounties();
+byId("countySummary").textContent=data.length+" selected counties · biggest Democratic-margin swing in selection: "+Math.max(...data.map(x=>x[2]-x[1])).toFixed(1)+" points. A change in aggregate margin does not measure individual party-switching.";
+byId("countyTable").innerHTML=data.map(c=>"<tr><td><strong>"+c[0]+"</strong></td><td>"+marginLabel(c[1])+"</td><td>"+marginLabel(c[2])+"</td><td class=\"value-blue\"><strong>+"+(c[2]-c[1]).toFixed(1)+" pp</strong></td></tr>").join("");
+document.querySelectorAll("[data-county-filter]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.countyFilter===countyFilter)));
+document.querySelectorAll("[data-county-sort]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.countySort===countySort)));
+}
+document.querySelectorAll("[data-county-filter]").forEach(b=>b.addEventListener("click",()=>{countyFilter=b.dataset.countyFilter;renderCounties()}));
+document.querySelectorAll("[data-county-sort]").forEach(b=>b.addEventListener("click",()=>{countySort=b.dataset.countySort;renderCounties()}));
+byId("countyCSV").addEventListener("click",()=>{
+const csv=["county,margin_2024_president_dem_positive,margin_2026_senate_dem_positive,shift_toward_dem_pp,source",...filteredCounties().map(c=>[c[0],c[1],c[2],(c[2]-c[1]).toFixed(1),"https://data.seeitnameitfightit.com/turnout/index.html"].join(","))].join("\r\n");
+const blob=new Blob([csv],{type:"text/csv;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="texas-county-senate-swing-2026.csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),3000);
+});
+
 byId("sourceGrid").innerHTML=sources.map((s,i)=>"<a class=\"source\" href=\""+s.url+"\" target=\"_blank\" rel=\"noopener noreferrer\"><b>"+String(i+1).padStart(2,"0")+" · "+s.name+" ↗</b><span>"+s.desc+"</span></a>").join("");
 byId("shareBtn").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(location.href);byId("shareStatus").textContent="Link copied."}catch(e){byId("shareStatus").textContent="Copy this address: "+location.href}});
-growthInit();renderTurnout();renderRace();renderPoll();renderRegions();
+growthInit();renderTurnout();renderRace();renderPoll();renderRegions();renderCounties();
 </script>
 </body>
 </html>
