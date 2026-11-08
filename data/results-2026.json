@@ -6523,84 +6523,85 @@
     },
     {
       "key": "S-TX",
-      "source": "https://www.poliwave.com/us/live/midterms-2026/senate/texas",
+      "source": "https://electionresults.sos.state.tx.us/results.html",
       "status": "called",
       "candidates": [
         {
-          "name": "JAMES TALARICO",
-          "party": "D",
-          "share": 55.8,
-          "votes": 5622041,
-          "winner": true
-        },
-        {
-          "name": "KEN PAXTON",
+          "name": "Ken Paxton",
           "party": "R",
-          "share": 42.2,
+          "share": 42.967645947745254,
           "votes": 4249373,
           "winner": false
         },
         {
-          "name": "TED BROWN",
+          "name": "James Talarico",
+          "party": "D",
+          "share": 55.057077542462345,
+          "votes": 5444982,
+          "winner": true
+        },
+        {
+          "name": "Ted Brown",
           "party": "L",
-          "share": 1.9,
+          "share": 1.9235863884298257,
           "votes": 190237,
           "winner": false
         },
         {
-          "name": "AVERY AYERS",
+          "name": "Avery Ayers",
           "party": "O",
-          "share": 0,
+          "share": 0.019464687719672906,
           "votes": 1925,
           "winner": false
         },
         {
-          "name": "JADE SIMMONS",
+          "name": "Jade Simmons",
           "party": "O",
-          "share": 0,
+          "share": 0.017573832341190393,
           "votes": 1738,
           "winner": false
         },
         {
-          "name": "BRADFORD \"BRAD\" HALL",
+          "name": "Bradford 'Brad' Hall",
           "party": "O",
-          "share": 0,
+          "share": 0.012770857449323053,
           "votes": 1263,
           "winner": false
         },
         {
-          "name": "ZUL MOHAMED",
+          "name": "Zul Mohamed",
           "party": "O",
-          "share": 0,
+          "share": 0.0018807438523943689,
           "votes": 186,
           "winner": false
         }
       ],
-      "sourceUpdated": "Updated at 5:03 PM ET by the Texas Secretary of State. Updates paused, retrying",
-      "reporting": "9,900 of 9,900 precincts 10M votes",
-      "marginText": "Margin 1.4M votes · 13.6 pts",
+      "sourceUpdated": "Texas SOS snapshot updated November 4, 2026, 4:59 p.m.; reviewed November 8.",
+      "reporting": "100% of polling locations reporting; unofficial",
+      "marginText": "Margin 1,195,609 votes · 12.1 pts",
       "id": "TX",
       "code": "TX",
       "place": "Texas",
       "chamber": "senate",
       "star": true,
       "winner": {
-        "name": "JAMES TALARICO",
+        "name": "James Talarico",
         "party": "D",
-        "share": 55.8,
-        "votes": 5622041,
+        "share": 55.057077542462345,
+        "votes": 5444982,
         "winner": true
       },
       "leader": {
-        "name": "JAMES TALARICO",
+        "name": "James Talarico",
         "party": "D",
-        "share": 55.8,
-        "votes": 5622041,
+        "share": 55.057077542462345,
+        "votes": 5444982,
         "winner": true
       },
       "forecast": null,
       "process": "ordinary",
-      "legacyNote": ""
+      "legacyNote": "",
+      "callSource": "https://www.poliwave.com/us/live/midterms-2026/senate/texas"
     },
     {
       "key": "S-VA",
@@ -7130,69 +7131,62 @@
     },
     {
       "key": "G-TX",
-      "source": "https://www.poliwave.com/us/live/midterms-2026/governors/texas",
+      "source": "https://electionresults.sos.state.tx.us/results.html",
       "status": "called",
       "candidates": [
         {
-          "name": "Gina Hinojosa",
-          "party": "D",
-          "share": 52.8,
-          "votes": 5232648,
-          "winner": true
-        },
-        {
           "name": "Greg Abbott",
           "party": "R",
-          "share": 45.7,
-          "votes": 4525858,
+          "share": 45.66824471573264,
+          "votes": 4524527,
           "winner": false
+        },
+        {
+          "name": "Gina Hinojosa",
+          "party": "D",
+          "share": 52.79688951096158,
+          "votes": 5230789,
+          "winner": true
         },
         {
           "name": "Pat Dixon",
           "party": "L",
-          "share": 1.5,
-          "votes": 148136,
-          "winner": false
-        },
-        {
-          "name": "Write-in",
-          "party": "I",
-          "share": 0,
-          "votes": 2215,
+          "share": 1.4946230492195667,
+          "votes": 148078,
           "winner": false
         },
         {
           "name": "Jenn Mack",
           "party": "O",
-          "share": 0,
+          "share": 0.02218547969438139,
           "votes": 2198,
           "winner": false
         },
         {
           "name": "Mike Miller",
           "party": "O",
-          "share": 0,
-          "votes": 1268,
+          "share": 0.01277835181669101,
+          "votes": 1266,
           "winner": false
         },
         {
           "name": "Edward Earl Giles",
           "party": "O",
-          "share": 0,
-          "votes": 567,
+          "share": 0.004531974696440967,
+          "votes": 449,
           "winner": false
         },
         {
           "name": "Jinghpaw Majoishingra",
           "party": "O",
-          "share": 0,
+          "share": 0.0007469178787007384,
           "votes": 74,
           "winner": false
         }
       ],
-      "sourceUpdated": "Updated at 2:52 AM ET by civicAPI. Updates paused, retrying",
-      "reporting": "990 of 1,000 precincts 9.9M votes",
-      "marginText": "Margin 707K votes · 7.1 pts",
+      "sourceUpdated": "Texas SOS snapshot updated November 4, 2026, 4:59 p.m.; reviewed November 8.",
+      "reporting": "100% of polling locations reporting; unofficial",
+      "marginText": "Margin 706,262 votes · 7.1 pts",
       "id": "TX",
       "code": "TX",
       "place": "Texas",
@@ -7201,20 +7195,21 @@
       "winner": {
         "name": "Gina Hinojosa",
         "party": "D",
-        "share": 52.8,
-        "votes": 5232648,
+        "share": 52.79688951096158,
+        "votes": 5230789,
         "winner": true
       },
       "leader": {
         "name": "Gina Hinojosa",
         "party": "D",
-        "share": 52.8,
-        "votes": 5232648,
+        "share": 52.79688951096158,
+        "votes": 5230789,
         "winner": true
       },
       "forecast": null,
       "process": "ordinary",
-      "legacyNote": ""
+      "legacyNote": "",
+      "callSource": "https://www.poliwave.com/us/live/midterms-2026/governors/texas"
     },
     {
       "key": "G-AK",
