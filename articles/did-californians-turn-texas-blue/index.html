@@ -166,9 +166,22 @@
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
     @media print { .nav-actions,.year-toggle,.copy-button { display:none!important; } .hero,.bottomline { background:#10223b!important; color:#fff!important; print-color-adjust:exact; -webkit-print-color-adjust:exact; } .section { padding:32px 0; } .hero-inner { min-height:250px; } .big-star { max-width:230px; } .source-list { grid-template-columns:1fr; } .reason { break-inside:avoid; } }
   </style>
-</head>
+<style>
+/* Shared navigation: all research pages remain one tap away. */
+.site-navigation{background:#0d1b31;color:#fff;font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;border-bottom:1px solid #38506f}
+.site-navigation .site-nav-inner{max-width:1250px;margin:auto;padding:16px 20px}
+.site-navigation .site-nav-brand{display:inline-block;color:#fff;text-decoration:none;font-size:12px;font-weight:850;letter-spacing:.09em;margin-bottom:10px}
+.site-navigation .site-nav-links{display:flex;flex-wrap:wrap;gap:7px}
+.site-navigation .site-nav-links a{display:block;color:#dceaff;text-decoration:none;padding:9px 12px;border:1px solid #38516f;border-radius:8px;font-size:12px;font-weight:700;line-height:1.4}
+.site-navigation .site-nav-links a:hover{background:#244465;color:white}
+.site-navigation .site-nav-links a[aria-current="page"]{background:#f6cf7c;border-color:#f6cf7c;color:#172f52}
+.site-navigation a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:600px){.site-navigation .site-nav-inner{padding:12px 14px}.site-navigation .site-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.site-navigation .site-nav-links a{padding:10px;font-size:11px}.site-navigation .site-nav-links a:first-child{grid-column:1/-1}}
+@media print{.site-navigation{display:none}}
+</style></head>
 <body>
-  <nav class="nav" aria-label="Main navigation">
+<nav class="site-navigation" aria-label="Site navigation"><div class="site-nav-inner"><a class="site-nav-brand" href="../.././">★ 2026 MIDTERMS · ELECTION DATA LAB</a><div class="site-nav-links"><a href="../../">Election tracker</a><a href="../../articles/house-2026-outstanding/">House watchlist</a><a href="../../articles/down-ballot-2026/">State power & progress</a><a href="../../articles/texas-2026-turnout-crossover/">Texas turnout & crossover</a><a href="../../articles/did-californians-turn-texas-blue/" aria-current="page">California → Texas fact-check</a><a href="../../articles/blue-tsunami-2026/">Blue tsunami · scale &amp; history</a></div></div></nav>
+  <nav class="nav" aria-label="On this page">
     <div class="wrap nav-inner">
       <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">★</span><span>Lone Star<br>Reality Check</span></a>
       <div class="nav-actions"><a class="nav-link" href="#the-numbers">The numbers</a><a class="nav-link" href="#sources">Sources</a><button class="small-button" type="button" id="shareBtn">Share ★</button></div>
@@ -364,3 +377,4 @@
   </script>
 </body>
 </html>
+
